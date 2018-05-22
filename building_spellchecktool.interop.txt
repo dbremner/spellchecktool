@@ -1,0 +1,82 @@
+**********************************************************************
+** Visual Studio 2017 Developer Command Prompt v15.7.1
+** Copyright (c) 2017 Microsoft Corporation
+**********************************************************************
+
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community>cd  "..\..\..\Windows Kits"
+
+C:\Program Files (x86)\Windows Kits>cd 10
+
+C:\Program Files (x86)\Windows Kits\10>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 38A2-E8A5
+
+ Directory of C:\Program Files (x86)\Windows Kits\10
+
+05/18/2018  08:59 PM    <DIR>          .
+05/18/2018  08:59 PM    <DIR>          ..
+05/18/2018  08:59 PM    <DIR>          App Certification Kit
+05/18/2018  08:59 PM    <DIR>          bin
+05/18/2018  09:01 PM    <DIR>          Catalogs
+05/18/2018  08:59 PM    <DIR>          DesignTime
+09/29/2015  09:57 PM    <DIR>          Extension SDKs
+05/18/2018  09:00 PM    <DIR>          Include
+05/18/2018  08:59 PM    <DIR>          Lib
+05/18/2018  08:59 PM    <DIR>          Licenses
+09/29/2015  09:56 PM    <DIR>          Platforms
+05/18/2018  09:00 PM    <DIR>          Redist
+05/18/2018  08:59 PM    <DIR>          References
+05/18/2018  09:00 PM    <DIR>          Remote
+04/19/2018  09:54 PM               421 SDKManifest.xml
+05/18/2018  08:59 PM    <DIR>          Shortcuts
+05/18/2018  09:00 PM    <DIR>          Source
+05/18/2018  08:59 PM    <DIR>          Testing
+05/18/2018  08:59 PM    <DIR>          UnionMetadata
+               1 File(s)            421 bytes
+              18 Dir(s)  11,184,250,880 bytes free
+
+C:\Program Files (x86)\Windows Kits\10>cd Include\10.0.10586.0\um
+
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um>midl /out C:\temp spellcheck.idl
+Microsoft (R) 32b/64b MIDL Compiler Version 8.01.0622
+Copyright (c) Microsoft Corporation. All rights reserved.
+Processing .\spellcheck.idl
+spellcheck.idl
+Processing .\oaidl.idl
+oaidl.idl
+Processing .\objidl.idl
+objidl.idl
+Processing .\unknwn.idl
+unknwn.idl
+Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared\wtypes.idl
+wtypes.idl
+Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared\wtypesbase.idl
+wtypesbase.idl
+Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared\basetsd.h
+basetsd.h
+Processing C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared\guiddef.h
+guiddef.h
+Processing .\ocidl.idl
+ocidl.idl
+Processing .\oleidl.idl
+oleidl.idl
+Processing .\servprov.idl
+servprov.idl
+Processing .\urlmon.idl
+urlmon.idl
+Processing .\msxml.idl
+msxml.idl
+Processing .\oaidl.acf
+oaidl.acf
+Processing .\ocidl.acf
+ocidl.acf
+
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.10586.0\um>cd \temp
+
+C:\temp>tlbimp /out:SpellCheckTool.Interop.dll spellcheck.tlb /product:SpellCheckTool /company:DavidBremner /productversion:1.0 /namespace:SpellCheckTool.Interop
+Microsoft (R) .NET Framework Type Library to Assembly Converter 4.6.1055.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+TlbImp : Type library imported to C:\temp\SpellCheckTool.Interop.dll
+
+C:\temp>
