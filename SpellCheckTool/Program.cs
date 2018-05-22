@@ -3,9 +3,9 @@ using SpellCheckTool.Interop;
 
 namespace SpellCheckTool
 {
-    static class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             if (args.Length != 2)
             {
