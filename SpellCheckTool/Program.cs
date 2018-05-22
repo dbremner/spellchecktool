@@ -7,7 +7,7 @@ using SpellCheckTool.Interop;
 
 namespace SpellCheckTool
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
