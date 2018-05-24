@@ -26,14 +26,8 @@ namespace SpellCheckTool
         /// </summary>
         /// <param name="culture">culture to create a spell checker for</param>
         public SpellChecker(CultureInfo culture)
+            : this(culture?.ToString())
         {
-            if (culture == null)
-            {
-                throw new ArgumentNullException(nameof(culture));
-            }
-
-            string cultureName = culture.ToString(); // e.g. en-US
-            checker = Factory.CreateSpellChecker(cultureName);
         }
 
         /// <summary>
