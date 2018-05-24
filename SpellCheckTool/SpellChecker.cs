@@ -5,13 +5,9 @@ namespace SpellCheckTool
 {
     internal sealed class SpellChecker
     {
-        private static readonly SpellCheckerFactory factory;
-        private readonly ISpellChecker checker;
+        private static readonly SpellCheckerFactory factory = new SpellCheckerFactory();
 
-        static SpellChecker()
-        {
-            factory = new SpellCheckerFactory();
-        }
+        private readonly ISpellChecker checker;
 
         public SpellChecker(CultureInfo culture)
         {
