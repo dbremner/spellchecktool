@@ -8,6 +8,9 @@ using System.Globalization;
 
 namespace SpellCheckTool
 {
+    /// <summary>
+    /// entry point
+    /// </summary>
     internal static class Program
     {
         private static void Main(string[] args)
