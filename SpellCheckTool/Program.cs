@@ -1,4 +1,9 @@
-﻿using System;
+﻿// <copyright file="Program.cs" company="David Bremner">
+// Copyright (c) David Bremner. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// </copyright>
+
+using System;
 using System.Globalization;
 
 namespace SpellCheckTool

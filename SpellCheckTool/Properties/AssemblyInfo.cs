@@ -1,6 +1,11 @@
-﻿using System;
-using System.Resources;
+﻿// <copyright file="AssemblyInfo.cs" company="David Bremner">
+// Copyright (c) David Bremner. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// </copyright>
+
+using System;
 using System.Reflection;
+using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -39,4 +44,3 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.*")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: NeutralResourcesLanguage("en-US")]
-
