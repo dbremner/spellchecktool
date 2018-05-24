@@ -3,6 +3,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 // </copyright>
 
+using System;
 using System.Globalization;
 using SpellCheckTool.Interop;
 
@@ -26,6 +27,11 @@ namespace SpellCheckTool
         /// <param name="culture">culture to create a spell checker for</param>
         public SpellChecker(CultureInfo culture)
         {
+            if (culture == null)
+            {
+                throw new ArgumentNullException(nameof(culture));
+            }
+
             string cultureName = culture.ToString(); // e.g. en-US
             checker = Factory.CreateSpellChecker(cultureName);
         }
@@ -37,6 +43,16 @@ namespace SpellCheckTool
         /// <param name="to">what to replace it with</param>
         public void AutoCorrect(string from, string to)
         {
+            if (string.IsNullOrWhiteSpace(from))
+            {
+                throw new ArgumentException(Resources.ArgumentMayNotBeNullOrWhiteSpace, nameof(from));
+            }
+
+            if (string.IsNullOrWhiteSpace(to))
+            {
+                throw new ArgumentException(Resources.ArgumentMayNotBeNullOrWhiteSpace, nameof(to));
+            }
+
             checker.AutoCorrect(from, to);
         }
     }

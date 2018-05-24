@@ -104,4 +104,7 @@
   <data name="ExampleInvocation" xml:space="preserve">
     <value>spellchecktool teh the</value>
   </data>
+  <data name="ArgumentMayNotBeNullOrWhiteSpace" xml:space="preserve">
+    <value>argument may not be null or whitespace</value>
+  </data>
 </root>

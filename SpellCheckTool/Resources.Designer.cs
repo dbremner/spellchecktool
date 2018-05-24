@@ -61,6 +61,15 @@ namespace SpellCheckTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to argument may not be null or whitespace.
+        /// </summary>
+        internal static string ArgumentMayNotBeNullOrWhiteSpace {
+            get {
+                return ResourceManager.GetString("ArgumentMayNotBeNullOrWhiteSpace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to spellchecktool teh the.
         /// </summary>
         internal static string ExampleInvocation {
