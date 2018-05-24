@@ -42,6 +42,11 @@ namespace SpellCheckTool
         /// <param name="cultureName">e.g. en-US</param>
         public SpellChecker(string cultureName)
         {
+            if (string.IsNullOrWhiteSpace(cultureName))
+            {
+                throw new ArgumentException(Resources.ArgumentMayNotBeNullOrWhiteSpace, nameof(cultureName));
+            }
+
             checker = Factory.CreateSpellChecker(cultureName);
         }
 
