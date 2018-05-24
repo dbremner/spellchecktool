@@ -17,7 +17,9 @@ namespace SpellCheckTool
             var factory = new SpellCheckerFactory();
             string cultureName = CultureInfo.CurrentCulture.ToString(); //e.g. en-US
             var checker = factory.CreateSpellChecker(cultureName);
-            checker.AutoCorrect(args[0], args[1]);
+            string from = args[0];
+            string to = args[1];
+            checker.AutoCorrect(from, to);
         }
 
         private static void ShowHelp()
