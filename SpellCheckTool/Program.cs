@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using SpellCheckTool.Interop;
 
 namespace SpellCheckTool
 {
@@ -14,7 +13,7 @@ namespace SpellCheckTool
                 return;
             }
 
-            var checker = CreateChecker(CultureInfo.CurrentCulture);
+            var checker = new SpellChecker(CultureInfo.CurrentCulture);
             string from = args[0];
             string to = args[1];
             checker.AutoCorrect(from, to);
@@ -24,14 +23,6 @@ namespace SpellCheckTool
         {
             Console.WriteLine(Resources.ExpectedTwoArguments);
             Console.WriteLine(Resources.ExampleInvocation);
-        }
-
-        private static ISpellChecker CreateChecker(CultureInfo culture)
-        {
-            var factory = new SpellCheckerFactory();
-            string cultureName = culture.ToString(); //e.g. en-US
-            var checker = factory.CreateSpellChecker(cultureName);
-            return checker;
         }
     }
 }

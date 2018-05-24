@@ -51,6 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SpellChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
