@@ -86,5 +86,14 @@ namespace SpellCheckTool {
                 return ResourceManager.GetString("ExpectedTwoArguments", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid language tag.
+        /// </summary>
+        internal static string InvalidLanguageTag {
+            get {
+                return ResourceManager.GetString("InvalidLanguageTag", resourceCulture);
+            }
+        }
     }
 }

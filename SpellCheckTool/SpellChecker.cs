@@ -5,6 +5,7 @@
 
 using System;
 using System.Globalization;
+using System.Runtime.InteropServices;
 using SpellCheckTool.Interop;
 
 namespace SpellCheckTool
@@ -41,7 +42,14 @@ namespace SpellCheckTool
                 throw new ArgumentException(Resources.ArgumentMayNotBeNullOrWhiteSpace, nameof(cultureName));
             }
 
-            checker = Factory.CreateSpellChecker(cultureName);
+            try
+            {
+                checker = Factory.CreateSpellChecker(cultureName);
+            }
+            catch (COMException ex)
+            {
+                throw new ArgumentException(Resources.InvalidLanguageTag, ex);
+            }
         }
 
         /// <summary>
