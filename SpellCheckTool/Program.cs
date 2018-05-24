@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using SpellCheckTool.Interop;
 
 namespace SpellCheckTool
@@ -15,7 +16,8 @@ namespace SpellCheckTool
             }
 
             var factory = new SpellCheckerFactory();
-            var checker = factory.CreateSpellChecker("en-us");
+            string cultureName = CultureInfo.CurrentCulture.ToString(); //e.g. en-US
+            var checker = factory.CreateSpellChecker(cultureName);
             checker.AutoCorrect(args[0], args[1]);
         }
     }
