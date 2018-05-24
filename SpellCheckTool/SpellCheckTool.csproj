@@ -69,6 +69,8 @@
     <Analyzer Include="..\packages\Roslynator.Analyzers.1.8.0\analyzers\dotnet\cs\Roslynator.Core.dll" />
     <Analyzer Include="..\packages\Roslynator.Analyzers.1.8.0\analyzers\dotnet\cs\Roslynator.CSharp.Analyzers.dll" />
     <Analyzer Include="..\packages\Roslynator.Analyzers.1.8.0\analyzers\dotnet\cs\Roslynator.Workspaces.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
