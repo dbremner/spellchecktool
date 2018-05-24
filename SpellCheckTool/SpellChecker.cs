@@ -37,6 +37,15 @@ namespace SpellCheckTool
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="SpellChecker"/> class.
+        /// </summary>
+        /// <param name="cultureName">e.g. en-US</param>
+        public SpellChecker(string cultureName)
+        {
+            checker = Factory.CreateSpellChecker(cultureName);
+        }
+
+        /// <summary>
         /// Add an autocorrection to the autocorrection list.
         /// </summary>
         /// <param name="from">word to replace</param>
