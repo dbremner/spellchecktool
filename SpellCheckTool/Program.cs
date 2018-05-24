@@ -10,8 +10,8 @@ namespace SpellCheckTool
         {
             if (args.Length != 2)
             {
-                Console.WriteLine("Expected two arguments:");
-                Console.WriteLine("spellchecktool teh the");
+                Console.WriteLine(Resources.ExpectedTwoArguments);
+                Console.WriteLine(Resources.ExampleInvocation);
                 return;
             }
 
